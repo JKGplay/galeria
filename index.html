@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+
+
+        div.container > img {
+            height: 25em;
+            width: auto;
+            border: #56342A solid 10px;
+            box-shadow: 0 0 10px black;
+            margin: 0.5em;
+            transition: 0.1s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        div.container > img:hover {
+            cursor: pointer;
+            box-shadow: 0 0 20px black;
+            transition: 0.1s ease-in-out;
+        }
+        div.container {
+            text-align: center;
+            margin: auto;
+        }
+        body {
+            background-color: #B68E65;
+        }
+        div.absolute > div {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            margin: 5% auto;
+            left: 0;
+            right: 0;
+            background-color: #986B41;
+            border: #56342A solid 10px;
+            width: fit-content;
+            border-radius: 20px;
+        }
+        div.absolute > div > img {
+            height: 70vh;
+            width: auto;
+            border: #56342A solid 10px;
+        }
+        button {
+            margin: 1em;
+            border: #56342A solid 5px;
+            border-radius: 15px;
+            background-color: #D7BA89;
+            color: #56342A;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 0.5em 1em;
+            box-shadow: 0 0 10px black;
+            transition: 0.1s ease-in-out;
+        }
+        button:hover {
+            cursor: pointer;
+            transition: 0.1s ease-in-out;
+            box-shadow: 0 0 20px black;
+            background-color: #56342A;
+            color: #D7BA89;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="absolute">
+            <div id="abs01"><img src="img/01.JPG" alt=""><br><button type="button" id="btn01">Zamknij</button></div>
+            <div id="abs02"><img src="img/02.JPG" alt=""><br><button type="button" id="btn02">Zamknij</button></div>
+            <div id="abs03"><img src="img/03.JPG" alt=""><br><button type="button" id="btn03">Zamknij</button></div>
+            <div id="abs04"><img src="img/04.JPG" alt=""><br><button type="button" id="btn04">Zamknij</button></div>
+            <div id="abs05"><img src="img/05.JPG" alt=""><br><button type="button" id="btn05">Zamknij</button></div>
+            <div id="abs06"><img src="img/06.JPG" alt=""><br><button type="button" id="btn06">Zamknij</button></div>
+            <div id="abs07"><img src="img/07.JPG" alt=""><br><button type="button" id="btn07">Zamknij</button></div>
+            <div id="abs08"><img src="img/08.JPG" alt=""><br><button type="button" id="btn08">Zamknij</button></div>
+            <div id="abs09"><img src="img/09.JPG" alt=""><br><button type="button" id="btn09">Zamknij</button></div>
+            <div id="abs10"><img src="img/10.JPG" alt=""><br><button type="button" id="btn10">Zamknij</button></div>
+            <div id="abs11"><img src="img/11.JPG" alt=""><br><button type="button" id="btn11">Zamknij</button></div>
+            <div id="abs12"><img src="img/12.JPG" alt=""><br><button type="button" id="btn12">Zamknij</button></div>
+            <div id="abs13"><img src="img/13.JPG" alt=""><br><button type="button" id="btn13">Zamknij</button></div>
+            <div id="abs14"><img src="img/14.JPG" alt=""><br><button type="button" id="btn14">Zamknij</button></div>
+            <div id="abs15"><img src="img/15.JPG" alt=""><br><button type="button" id="btn15">Zamknij</button></div>
+        </div>
+
+        <img src="img/01.JPG" alt="" id="01">
+        <img src="img/02.JPG" alt="" id="02">
+        <img src="img/03.JPG" alt="" id="03">
+        <img src="img/04.JPG" alt="" id="04">
+        <img src="img/05.JPG" alt="" id="05">
+        <img src="img/06.JPG" alt="" id="06">
+        <img src="img/07.JPG" alt="" id="07">
+        <img src="img/08.JPG" alt="" id="08">
+        <img src="img/09.JPG" alt="" id="09">
+        <img src="img/10.JPG" alt="" id="10">
+        <img src="img/11.JPG" alt="" id="11">
+        <img src="img/12.JPG" alt="" id="12">
+        <img src="img/13.JPG" alt="" id="13">
+        <img src="img/14.JPG" alt="" id="14">
+        <img src="img/15.JPG" alt="" id="15">
+    </div>
+    <script>
+        document.getElementById("01").addEventListener("click", imgClick);
+        document.getElementById("02").addEventListener("click", imgClick);
+        document.getElementById("03").addEventListener("click", imgClick);
+        document.getElementById("04").addEventListener("click", imgClick);
+        document.getElementById("05").addEventListener("click", imgClick);
+        document.getElementById("06").addEventListener("click", imgClick);
+        document.getElementById("07").addEventListener("click", imgClick);
+        document.getElementById("08").addEventListener("click", imgClick);
+        document.getElementById("09").addEventListener("click", imgClick);
+        document.getElementById("10").addEventListener("click", imgClick);
+        document.getElementById("11").addEventListener("click", imgClick);
+        document.getElementById("12").addEventListener("click", imgClick);
+        document.getElementById("13").addEventListener("click", imgClick);
+        document.getElementById("14").addEventListener("click", imgClick);
+        document.getElementById("15").addEventListener("click", imgClick);
+
+        document.getElementById("btn01").addEventListener("click", imgClose);
+        document.getElementById("btn02").addEventListener("click", imgClose);
+        document.getElementById("btn03").addEventListener("click", imgClose);
+        document.getElementById("btn04").addEventListener("click", imgClose);
+        document.getElementById("btn05").addEventListener("click", imgClose);
+        document.getElementById("btn06").addEventListener("click", imgClose);
+        document.getElementById("btn07").addEventListener("click", imgClose);
+        document.getElementById("btn08").addEventListener("click", imgClose);
+        document.getElementById("btn09").addEventListener("click", imgClose);
+        document.getElementById("btn10").addEventListener("click", imgClose);
+        document.getElementById("btn11").addEventListener("click", imgClose);
+        document.getElementById("btn12").addEventListener("click", imgClose);
+        document.getElementById("btn13").addEventListener("click", imgClose);
+        document.getElementById("btn14").addEventListener("click", imgClose);
+        document.getElementById("btn15").addEventListener("click", imgClose);
+
+        let varid = 0;
+
+        function imgClick () {
+            document.getElementById("abs"+this.id).style.display = "block";
+        }
+
+        function imgClose () {
+            document.getElementById("abs"+this.id.slice(-2)).style.display = "none";
+        }
+
+
+    </script>
+</body>
+</html>
