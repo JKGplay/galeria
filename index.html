@@ -150,39 +150,49 @@
         <img src="imgLowRes/15.JPG" alt="" id="15">
     </div>
     <script>
-        document.getElementById("01").addEventListener("click", imgClick);
-        document.getElementById("02").addEventListener("click", imgClick);
-        document.getElementById("03").addEventListener("click", imgClick);
-        document.getElementById("04").addEventListener("click", imgClick);
-        document.getElementById("05").addEventListener("click", imgClick);
-        document.getElementById("06").addEventListener("click", imgClick);
-        document.getElementById("07").addEventListener("click", imgClick);
-        document.getElementById("08").addEventListener("click", imgClick);
-        document.getElementById("09").addEventListener("click", imgClick);
-        document.getElementById("10").addEventListener("click", imgClick);
-        document.getElementById("11").addEventListener("click", imgClick);
-        document.getElementById("12").addEventListener("click", imgClick);
-        document.getElementById("13").addEventListener("click", imgClick);
-        document.getElementById("14").addEventListener("click", imgClick);
-        document.getElementById("15").addEventListener("click", imgClick);
+        // document.getElementById("01").addEventListener("click", imgClick);
+        // document.getElementById("02").addEventListener("click", imgClick);
+        // document.getElementById("03").addEventListener("click", imgClick);
+        // document.getElementById("04").addEventListener("click", imgClick);
+        // document.getElementById("05").addEventListener("click", imgClick);
+        // document.getElementById("06").addEventListener("click", imgClick);
+        // document.getElementById("07").addEventListener("click", imgClick);
+        // document.getElementById("08").addEventListener("click", imgClick);
+        // document.getElementById("09").addEventListener("click", imgClick);
+        // document.getElementById("10").addEventListener("click", imgClick);
+        // document.getElementById("11").addEventListener("click", imgClick);
+        // document.getElementById("12").addEventListener("click", imgClick);
+        // document.getElementById("13").addEventListener("click", imgClick);
+        // document.getElementById("14").addEventListener("click", imgClick);
+        // document.getElementById("15").addEventListener("click", imgClick);  
 
-        document.getElementById("btn01").addEventListener("click", imgClose);
-        document.getElementById("btn02").addEventListener("click", imgClose);
-        document.getElementById("btn03").addEventListener("click", imgClose);
-        document.getElementById("btn04").addEventListener("click", imgClose);
-        document.getElementById("btn05").addEventListener("click", imgClose);
-        document.getElementById("btn06").addEventListener("click", imgClose);
-        document.getElementById("btn07").addEventListener("click", imgClose);
-        document.getElementById("btn08").addEventListener("click", imgClose);
-        document.getElementById("btn09").addEventListener("click", imgClose);
-        document.getElementById("btn10").addEventListener("click", imgClose);
-        document.getElementById("btn11").addEventListener("click", imgClose);
-        document.getElementById("btn12").addEventListener("click", imgClose);
-        document.getElementById("btn13").addEventListener("click", imgClose);
-        document.getElementById("btn14").addEventListener("click", imgClose);
-        document.getElementById("btn15").addEventListener("click", imgClose);
+        // document.getElementById("btn01").addEventListener("click", imgClose);
+        // document.getElementById("btn02").addEventListener("click", imgClose);
+        // document.getElementById("btn03").addEventListener("click", imgClose);
+        // document.getElementById("btn04").addEventListener("click", imgClose);
+        // document.getElementById("btn05").addEventListener("click", imgClose);
+        // document.getElementById("btn06").addEventListener("click", imgClose);
+        // document.getElementById("btn07").addEventListener("click", imgClose);
+        // document.getElementById("btn08").addEventListener("click", imgClose);
+        // document.getElementById("btn09").addEventListener("click", imgClose);
+        // document.getElementById("btn10").addEventListener("click", imgClose);
+        // document.getElementById("btn11").addEventListener("click", imgClose);
+        // document.getElementById("btn12").addEventListener("click", imgClose);
+        // document.getElementById("btn13").addEventListener("click", imgClose);
+        // document.getElementById("btn14").addEventListener("click", imgClose);
+        // document.getElementById("btn15").addEventListener("click", imgClose);
 
-        let varid = 0;
+        for (let i = 1; i < 16; i++) {
+            document.getElementById(convert(i)).addEventListener("click", imgClick);
+            document.getElementById("btn"+convert(i)).addEventListener("click", imgClose);
+        }
+
+        function convert(n) {
+            n = String(n);
+            if (n.length == 1)
+                n = '0' + n;
+            return n;
+        }
 
         function imgClick () {
             document.getElementById("abs"+this.id).style.display = "block";
